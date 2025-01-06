@@ -18,7 +18,7 @@ pwm_cycle_time: 0.02        (if 50hz power grid)
 ## Bed leveling 
 
 ### Spring Screw change 
-
+   DONE 
 ### screws_tilt_adjust
 helps to level the bed by telling how much to turn the weels. 
 
@@ -67,9 +67,18 @@ Calibrating E-steps, temperature tolerances, and flow are a great way to start.
 Should I get the max x and y values changed to maximise the area available for the probe ? 
 
 use the SCREW_TILT_CALCULATE (in tools menu)
-and follow the resulting recommendations
+and follow the resulting recommendations repeat until under 5 minutes 
 
-
+# Probe z offset 
 
 
 probing middle at  147  154  
+
+
+
+remove coasting 
+
+
+[gcode_macro start_print]
+
+>>> Start G code macro 
