@@ -52,48 +52,12 @@ sudo raspi-config
 didn't seem to work
 finally managed to get the new firmware out and on the ender and this seems to have improved stability of the system. Still not really reassured this won't come back to bite me in the worst posible moment. 
 
-## Bed leveling 
 
-### Spring Screw change 
+# moonraker.conf
 
-### screws_tilt_adjust
-helps to level the bed by telling how much to turn the weels. 
-
-text article on screws_tilt_adjust:
-https://www.printsleo3d.com/screwtilt
-
-[screws_tilt_adjust]
-screw1: -5, 30     #screw coordinates need to be measure for YOUR specific printer
-screw1_name: front left screw
-screw2: 155, 30
-screw2_name: front right screw
-screw3: 155, 190
-screw3_name: rear right screw
-screw4: -5, 190
-screw4_name: rear left screw
-horizontal_move_z: 10.
-speed: 50.   #speed of travel moves between screws
-screw_thread: CW-M3  #measure your bed screw m3=3mm / m4=4mm / m5=5mm
-
-
-
-
-
-
-
-# Buisiness in 3d printing
-
-patience persistence perceverance practice
-
-
-- sell 3dprints
-- design 3dprints
-    - parametric 3d design
-        accurate 3d parts   calipers
-
-
-    - blender 
-- Product 
-    bubble mailer or paper filling + package 
-    printer for labels 
-
+[update_manager timelapse]
+type: git_repo
+primary_branch: main
+path: ~/moonraker-timelapse
+origin: https://github.com/mainsail-crew/moonraker-timelapse.git
+managed_services: klipper moonraker
